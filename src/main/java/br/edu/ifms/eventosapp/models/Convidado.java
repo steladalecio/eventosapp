@@ -1,6 +1,9 @@
 package br.edu.ifms.eventosapp.models;
 
+import javax.persistence.Id;
 import javax.persistence.ManyToOne;
+
+import org.hibernate.validator.constraints.NotEmpty;
 
 public class Convidado {
     @Id

@@ -1,6 +1,4 @@
 package br.edu.ifms.eventosapp;
-
-import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest

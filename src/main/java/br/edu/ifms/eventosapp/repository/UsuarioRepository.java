@@ -3,9 +3,9 @@ package br.edu.ifms.eventosapp.repository;
 
 import org.springframework.data.repository.CrudRepository;
 
-import com.eventosapp.models.Usuario;
+import br.edu.ifms.eventosapp.models.Usuario;
 
 public interface UsuarioRepository extends CrudRepository<Usuario, String>{
 
-    Usuario findByLogin(String login);
+    Usuario findByLogin (String login);
 }

@@ -3,7 +3,7 @@ package br.edu.ifms.eventosapp.models;
 import javax.persistence.*;
 
 @Entity
-public class Usuario {
+public class Usuario<NewEntity> {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id", nullable = false)
@@ -15,6 +15,8 @@ public class Usuario {
     @ManyToOne
     @JoinColumn(name = "new_entity_id")
     private NewEntity newEntity;
+
+    private Evento evento;
 
     public String getId() {
         return String.valueOf(id);
@@ -43,9 +45,8 @@ public class Usuario {
         return nomeConvidado;
     }
     public void setNomeConvidado(String nomeConvidado) {
-        this.nomeConvidado = nomeConvidado;
     }
-    public br.edu.ifms.eventosapp.models.Evento getEvento() {
+    public br.edu.ifms.eventosapp.models.  Evento getEvento() {
         br.edu.ifms.eventosapp.models.Evento evento = null;
         return evento;
     }

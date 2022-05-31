@@ -20,10 +20,15 @@ import javax.validation.Valid;
 public class EventoController {
 
     @Autowired
-    private EventoRepository er;
+    private final EventoRepository er;
+
+    public EventoController(EventoRepository er, ConvidadoRepository cr) {
+        this.er = er;
+        this.cr = cr;
+    }
 
     @Autowired
-    private ConvidadoRepository cr;
+    private final ConvidadoRepository cr;
 
     @RequestMapping(value="/cadastrarEvento", method=RequestMethod.GET)
     public String form(){
